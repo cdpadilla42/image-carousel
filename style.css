@@ -1,0 +1,7 @@
+.images img {
+  display: none;
+}
+
+.images .active {
+  display: block;
+}
