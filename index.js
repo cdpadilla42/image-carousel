@@ -60,6 +60,7 @@ const carouselModule = (function() {
     dot.addEventListener('click', () => {
       const oldImg = document.querySelector('.active');
       swapActiveImg(oldImg, imgs[index]);
+      showActiveDot(index);
     });
   };
 
@@ -96,11 +97,16 @@ const carouselModule = (function() {
     activeDot.classList.add('current');
   };
 
+  const activateDotHighlighting = function() {
+    showActiveDot(0);
+  };
+
   const startCarousel = function() {
     setIndexForImgs();
     activateImg(imgs[0]);
     addListenersToButtons();
     createDotMenu();
+    activateDotHighlighting();
     addAutoScroll();
   };
 
