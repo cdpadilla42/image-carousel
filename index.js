@@ -17,6 +17,9 @@ const deactivateImg = function(img) {
 };
 
 const swapActiveImg = function(oldImg, newImg) {
+  if (oldImg === newImg) {
+    return;
+  }
   deactivateImg(oldImg);
   activateImg(newImg);
 };
@@ -57,6 +60,14 @@ const addListenersToButtons = function() {
 
 addListenersToButtons();
 
+const addListenersToNavDot = function(dot, index) {
+  // adds listener that swaps to selected image upon click for each dot
+  dot.addEventListener('click', () => {
+    const oldImg = document.querySelector('.active');
+    swapActiveImg(oldImg, imgs[index]);
+  });
+};
+
 const createDotMenu = function() {
   const navDotsDiv = document.querySelector('.nav-dots');
   imgs.forEach((img, index) => {
@@ -64,6 +75,7 @@ const createDotMenu = function() {
     dot.classList.add('dot');
     dot.setAttribute('data-index', index);
     navDotsDiv.appendChild(dot);
+    addListenersToNavDot(dot, index);
   });
 };
 
