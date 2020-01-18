@@ -80,3 +80,7 @@ const createDotMenu = function() {
 };
 
 createDotMenu();
+
+const addAutoScrcroll = function() {
+  // now write the automated scrolling time function! You're so close!
+};

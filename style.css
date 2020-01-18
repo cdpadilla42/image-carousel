@@ -5,6 +5,7 @@
 /* Carousel Container */
 
 .carousel-wrapper {
+  /* Not Needed?  */
   display: block;
   width: 100%;
 }
@@ -28,6 +29,16 @@
 
 .move-forward {
   grid-area: fwd;
+}
+
+.arrow {
+  font-size: 50px;
+  text-align: center;
+  color: grey;
+  transition: 600ms;
+}
+.arrow:hover {
+  color: blue;
 }
 /* Carousel Images */
 
