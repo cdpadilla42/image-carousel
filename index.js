@@ -58,5 +58,13 @@ const addListenersToButtons = function() {
 addListenersToButtons();
 
 const createDotMenu = function() {
-  // creates div with dots for selecting imgs. Yay Dynamic coding!
+  const navDotsDiv = document.querySelector('.nav-dots');
+  imgs.forEach((img, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    dot.setAttribute('data-index', index);
+    navDotsDiv.appendChild(dot);
+  });
 };
+
+createDotMenu();

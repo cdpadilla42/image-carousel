@@ -5,3 +5,16 @@
 .images .active {
   display: block;
 }
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: grey;
+  transition: 600ms;
+  margin: 5px;
+  display: inline-block;
+}
+.dot:hover {
+  background-color: blue;
+}
