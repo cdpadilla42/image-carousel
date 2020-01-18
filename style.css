@@ -1,9 +1,53 @@
+.content {
+  text-align: center;
+}
+
+/* Carousel Container */
+
+.carousel-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: 50px 690px 50px;
+  grid-template-rows: 1fr 50px;
+  grid-template-areas:
+    'back img fwd'
+    'nav nav nav';
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Direction Arrows */
+.move-back {
+  grid-area: back;
+}
+
+.move-forward {
+  grid-area: fwd;
+}
+/* Carousel Images */
+
+.images {
+  grid-area: img;
+}
+
 .images img {
   display: none;
+  height: 1000px;
 }
 
 .images .active {
   display: block;
+}
+
+/* Carousel Dot Navigation */
+
+.nav-dots {
+  grid-area: nav;
 }
 
 .dot {
