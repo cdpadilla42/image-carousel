@@ -79,6 +79,7 @@
   margin: 5px;
   display: inline-block;
 }
-.dot:hover {
+.dot:hover,
+.dot.current {
   background-color: blue;
 }
