@@ -81,6 +81,11 @@ const createDotMenu = function() {
 
 createDotMenu();
 
-const addAutoScrcroll = function() {
-  // now write the automated scrolling time function! You're so close!
+const addAutoScroll = function() {
+  window.setInterval(() => {
+    const currentImgIndex = getCurrentImgIndex();
+    moveToNextImg(currentImgIndex);
+  }, 5000);
 };
+
+addAutoScroll();
